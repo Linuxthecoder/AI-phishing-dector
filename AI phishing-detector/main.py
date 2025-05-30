@@ -11,16 +11,15 @@ def download_spacy_model():
         print("Model downloaded successfully!")
 
 def main():
-    # Download spacy model if not already installed
+ 
     download_spacy_model()
     
-    # Initialize the detector
     detector = PhishingDetector()
     
     print("=== AI Phishing Email Detector ===")
     print("Enter the email details below (press Ctrl+D or Ctrl+Z when finished):")
     
-    # Get email subject
+   
     subject = input("\nEmail Subject: ").strip()
     
     print("\nEmail Body (enter/paste the content and press Ctrl+D or Ctrl+Z when done):")
@@ -33,10 +32,8 @@ def main():
     except (EOFError, KeyboardInterrupt):
         body = "\n".join(body_lines)
     
-    # Analyze the email
     results = detector.analyze_email(subject, body)
-    
-    # Display results
+
     print("\n=== Analysis Results ===")
     print(f"Risk Level: {results['risk_level']}")
     print(f"Risk Score: {results['risk_score']:.2f}/100")
@@ -50,8 +47,7 @@ def main():
         print("\nSuspicious URLs detected:")
         for url in results['suspicious_urls']:
             print(f"- {url}")
-    
-    # Provide recommendations
+
     print("\nRecommendations:")
     if results['risk_level'] in ["HIGH", "MEDIUM"]:
         print("- Do NOT click on any links or download any attachments")
