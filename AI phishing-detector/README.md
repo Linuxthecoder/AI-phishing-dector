@@ -22,7 +22,7 @@ This tool uses AI and natural language processing to analyze emails for potentia
 
 1. Clone this repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/Linuxthecoder/AI-phishing-dector
 cd ai-phishing-detector
 ```
 
