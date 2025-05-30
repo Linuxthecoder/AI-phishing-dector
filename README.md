@@ -34,5 +34,5 @@ The detection system uses a multi-layered approach:
 ## Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/phishing-detector.git
+git clone https://github.com/Linuxthecoder/AI-phishing-dector
 cd phishing-detector
